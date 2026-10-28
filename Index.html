@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniAI — შენი AI ასისტენტი</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #171f35;
+      border-radius: 20px;
+    }
+    h1 { color: #70a5ff; }
+    p { line-height: 1.6; }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    input {
+      border: 1px solid #52617d;
+      background: #0b1020;
+      color: white;
+    }
+    button {
+      border: 0;
+      background: #3978f6;
+      color: white;
+      font-weight: bold;
+    }
+    #answer { color: #a9c7ff; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 OmniAI</h1>
+    <p>შენი უნივერსალური AI ასისტენტი</p>
+    <p>მომავალი იწყება აქ!</p>
+    <input id="question" placeholder="დაწერე შენი კითხვა...">
+    <button onclick="reply()">დაწყება</button>
+    <p id="answer">მზად ვარ!</p>
+  </div>
+  <script>
+    function reply() {
+      const q = document.getElementById('question').value.trim();
+      document.getElementById('answer').textContent =
+        q ? 'შენი კითხვა მიღებულია: ' + q :
+        'გთხოვ, ჯერ კითხვა დაწერე.';
+    }
+  </script>
+</body>
+</html>
